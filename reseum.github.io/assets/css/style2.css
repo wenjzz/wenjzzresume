@@ -1,0 +1,158 @@
+
+#progressBar{
+transform:rotate(90deg);
+width: 500px;
+height: 50px;
+position: relative;
+
+}
+#progressBar div{
+
+width: 78%;
+height: 10px;
+position: absolute;
+top:50%;
+left: 0;
+margin-top:-20px;
+background: #ccc;
+}
+#progressBar div span{
+position: absolute;
+display: inline-block;
+background: green;
+height: 10px;
+width: 100%;
+-webkit-animation:bgLoad 5.5s linear infinite;
+}
+
+@-webkit-keyframes bgLoad{
+0%{
+width: 0%;
+}
+20%{
+width:25%;
+}
+30%{
+width: 50%;
+}
+40%{
+width: 75%;
+}
+78%{
+width:100%;
+}
+}
+#progressBar>span{
+position: absolute;
+top:0;
+margin-top: -10px;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: #ccc;
+margin-left: -20px;
+color:#fff;
+}
+@-webkit-keyframes circleLoad_1{
+0%,66.66%{
+background: #ccc;
+}
+100%{
+background:green;
+}
+}
+@-webkit-keyframes circleLoad_2{
+0%,83.34%{
+background: #ccc;
+}
+100%{
+background:green;
+}
+}
+@-webkit-keyframes circleLoad_3{
+0%,88.88%{
+background: #ccc;
+}
+100%{
+background:green;
+}
+}
+@-webkit-keyframes circleLoad_4{
+0%,91.67%{
+background: #ccc;
+}
+100%{
+background:green;
+}
+}
+#progressBar span:nth-child(2){
+left: 0%;background:green;
+}
+#progressBar span:nth-child(3){
+left: 25%;background:green;
+-webkit-animation:circleLoad_1 1.5s ease-in ;
+}
+#progressBar span:nth-child(4){
+left: 50%;background:green;
+-webkit-animation:circleLoad_2 3s ease-in  ;
+}
+#progressBar span:nth-child(5){
+left: 75%;background:green;
+-webkit-animation:circleLoad_3 10s ease-in ;
+}
+
+.test{
+width: 240px;
+height: 130px;
+/*background: red;*/
+font-family: 微軟正黑體;
+font-size: 20pt;
+display: inline-block;
+}
+
+/*.test:hover{
+background: url("assets/image/word.png");
+} */
+.areathree{
+width: 1500px;
+height:700px;
+margin:auto;
+background: #fffafa;
+}          
+
+.tii{
+width: 1500px; 
+height: 120px;
+background: white;
+columns: 3;
+
+}
+.circular-chart {
+display: inline-block;
+margin: 10px auto;
+max-width: 180px;
+max-height: 150px;
+}
+.circle-bg {
+fill: none;
+stroke: #eee;
+stroke-width: 4;
+}
+
+.circle {
+fill: none;
+stroke-width: 4;
+stroke-linecap: round;
+animation: progress 8s ease-out forwards;
+}
+@keyframes progress {
+0% {
+  stroke-dasharray: 0 100;
+}
+}
+.circular-chart.c .circle {
+stroke: #6a8a82;
+}
+/*.circular-chart.c{
+margin-left: 40px;
+}*/
